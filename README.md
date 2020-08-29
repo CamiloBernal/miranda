@@ -1,7 +1,7 @@
-# miranda
+# Miranda Project
 A golang + qt Evernote Client
 
-**StacK**:
+**Stack**:
 
 For UI: Qt binding for Go: https://github.com/therecipe/qt
 
