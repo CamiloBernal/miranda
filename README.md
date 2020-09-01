@@ -34,5 +34,22 @@ your-application-name
 *ref: https://blog.friendsofgo.tech/posts/como_estructurar_tus_aplicaciones_go/
 
 
+# How to generate code step by step
 
+1. Install the latest Thrift. *(`sudo pacman -S thrift` if you are using Arch)*
+1. Clone evernote-thrift repo `https://github.com/evernote/evernote-thrift`
+1. Generate golang version specs through this command:
+
+     ```bash
+     thrift -strict -nowarn \
+       --allow-64bit-consts \
+       --allow-neg-keys \
+       --gen go:package_prefix=github.com/camilobernal/miranda/,thrift_import=github.com/apache/thrift/lib/thrift \
+       -strict -nowarn --allow-64bit-consts \
+       --allow-neg-keys \
+       --gen go:package_prefix=github.com/camilobernal/miranda/,thrift_import=github.com/apache/thrift/lib/go/thrift \
+       -I src/ -r \
+       --out github.com/camilobernal/miranda src/UserStore.thrift
+     ```
+   (thanks to:  github.com/dreampuf/evernote-sdk-golang )
 
