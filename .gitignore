@@ -368,3 +368,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/go,visualstudiocode,linux,archlinuxpackages,windows,jetbrains+all,qt,qtcreator,node
+#specific files for therecipe/qt
+Mfile*
+qtbox
